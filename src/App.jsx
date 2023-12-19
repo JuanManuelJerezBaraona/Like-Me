@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Form from "./components/Form";
 import Post from "./components/Post";
 
-const urlBaseServer = "http://localhost:5173";
+const urlBaseServer = "http://localhost:3000";
 
 function App() {
   const [titulo, setTitulo] = useState("");
@@ -18,12 +18,8 @@ function App() {
 
   const agregarPost = async () => {
     const post = { titulo, img: imgSrc, descripcion };
-    try {
-      await axios.post(urlBaseServer + "/posts", post);
-      getPosts();
-    } catch (error) {
-      console.error(error);
-    }
+    await axios.post(urlBaseServer + "/posts", post);
+    getPosts();
   };
 
   // este método se utilizará en el siguiente desafío
