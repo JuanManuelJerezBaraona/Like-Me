@@ -1,11 +1,11 @@
 import pkg from 'pg';
-const { Pool } = pkg;
+import pg from 'pg';
 
-export const pool = new Pool({
+export const pool = new pg.Pool({
     user: 'postgres',
     host: 'localhost',
     database: 'likeme',
-    password: '',
+    password: '855518qwe',
     port: 5432,
     allowExitOnIdle: true
 });
