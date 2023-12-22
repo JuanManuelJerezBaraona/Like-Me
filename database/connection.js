@@ -1,11 +1,10 @@
-import pkg from 'pg';
 import pg from 'pg';
 
-export const pool = new pg.Pool({
+const pool = new pg.Pool({
     user: 'postgres',
     host: 'localhost',
     database: 'likeme',
-    password: '855518qwe',
+    password: '',
     port: 5432,
     allowExitOnIdle: true
 });
@@ -16,3 +15,5 @@ try {
 } catch (error) {
     console.log(error);
 }
+
+export default pool;
